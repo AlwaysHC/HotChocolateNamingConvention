@@ -5,5 +5,5 @@ namespace HotChocolateNamingConvention;
 
 public class Subscription {
     [Subscribe]
-    public Book BookAdded([EventMessage] Book Book) => Book;
+    public Book BookAdded([EventMessage] Book book) => book;
 }

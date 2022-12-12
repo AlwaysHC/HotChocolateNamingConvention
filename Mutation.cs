@@ -13,8 +13,8 @@ public class Mutation {
             }
         };
 
-    public async Task<Book> AddBook(Book Book, [Service] ITopicEventSender sender) {
-        await sender.SendAsync(nameof(Subscription.BookAdded), Book);
-        return Book;
+    public async Task<Book> AddBook(Book book, [Service] ITopicEventSender sender) {
+        await sender.SendAsync(nameof(Subscription.BookAdded), book);
+        return book;
     }
 }

@@ -6,7 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 WebApplicationBuilder Builder = WebApplication.CreateBuilder(args);
 
 Builder.Services
-    .AddSingleton<INamingConventions, NamingConventions>()
+    //.AddSingleton<INamingConventions, NamingConventions>()
     .AddInMemorySubscriptions()
     .AddGraphQLServer()
     .AddQueryType<Query>()
